@@ -1,0 +1,62 @@
+
+// flipping magic
+.flip-container() {
+  perspective: 1000px;
+  height: 300px;
+  width: 280px;
+  .flipper {
+    position: relative;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    .front, .back {
+      height: 300px;
+      width: 280px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+    }
+    .front {
+      z-index: 2;
+      /* for firefox 31 */
+      transform: rotateY(0deg);
+    }
+    .back {
+      transform: rotateY(180deg);
+      overflow: hidden;
+    }
+  }
+}
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+// <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+//   <div class="flipper">
+//     <div class="front">
+//       <p></p>
+//     </div>
+//     <div class="back">
+//       <p></p>
+//     </div>
+//   </div>
+// </div>
+
+
+
+
+
+
+
+
+
+

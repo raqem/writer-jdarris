@@ -1,0 +1,58 @@
+<div id="contact" v-cloak>
+  <div class="top-bar">
+    <header id="top-bar-nav" class="navbar navbar-expand-sm navbar-dark flex-column flex-md-row justify-content-between">
+      <a class="navbar-brand mr-0" href="/">J Darris Mitchell</a>
+      <div class="nav-links">
+        <a class="navbar-link" href="/fiction">Fiction</a>
+        <a class="navbar-link" href="/games">Games</a>
+        <a class="navbar-link" href="/blogs">Blogs</a>
+        <a class="navbar-link" href="/about">About</a>
+        <a class="navbar-link" href="/contact">Contact</a>
+      </div>
+    </header>
+  </div>
+  <div class="container">
+    <h1 class="text-center">Contact</h1>
+    <div class="contact-form" v-if="!cloudSuccess">
+      <hr/>
+      <a href="mailto:Jdarrismitchell@gmail.com" target="_blank"><h5 class="text-center">Jdarrismitchell@gmail.com</h5></a>
+      <a href="/" target="_blank"><h5 class="text-center">www.jdarrismitchell.com</h5></a>
+      <hr/>
+      <ajax-form action="deliverContactFormMessage" :syncing.sync="syncing" :cloud-error.sync="cloudError" @submitted="submittedForm()" :handle-parsing="handleParsingForm">
+        <div class="form-group">
+          <label for="full-name">Name</label>
+          <input class="form-control" id="full-name" name="full-name" type="text"  :class="[formErrors.fullName ? 'is-invalid' : '']" v-model.trim="formData.fullName" placeholder="Merium Fox" autocomplete="name" focus-first>
+          <div class="invalid-feedback" v-if="formErrors.fullName">Please let us know what to call you.</div>
+        </div>
+        <div class="form-group">
+          <label for="email-address">Email address</label>
+          <input class="form-control" id="email-address" name="email-address" type="email"  :class="[formErrors.emailAddress ? 'is-invalid' : '']" v-model.trim="formData.emailAddress" placeholder="Fox@example.com" autocomplete="email">
+          <div class="invalid-feedback" v-if="formErrors.emailAddress">Please enter a valid email address.</div>
+        </div>
+        <div class="form-group">
+          <label for="topic">Topic</label>
+          <input class="form-control" id="topic" name="topic" type="text"  :class="[formErrors.topic ? 'is-invalid' : '']" v-model.trim="formData.topic" placeholder="When are you..." autocomplete="none">
+          <div class="invalid-feedback" v-if="formErrors.topic">Please choose a topic for your message.</div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" name="message" :class="[formErrors.message ? 'is-invalid' : '']" v-model.trim="formData.message" placeholder="" autocomplete="none"></textarea>
+          <div class="invalid-feedback" v-if="formErrors.message">Message cannot be empty.</div>
+        </div>
+        <p class="text-danger" v-if="cloudError"><small>An error occured while processing your request. Please check your information and try again, or <a href="/contact">contact support</a> if the error persists.</small></p>
+        <div class="form-group">
+          <ajax-button type="submit" :syncing="syncing" class="btn btn-dark btn-lg btn-block">Send message</ajax-button>
+        </div>
+      </ajax-form>
+      <div class="bottom-picture">
+        <img src="/images/van-joe.jpg">
+      </div>
+    </div>
+    <div class="success-message" v-if="cloudSuccess">
+      <p class="text-center">Thanks for reaching out!</p>
+      <hr/>
+      <p>We have received your message, and someone from our team will get back to you soon.</p>
+    </div>
+  </div>
+</div>
+<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>

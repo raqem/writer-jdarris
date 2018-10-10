@@ -1,0 +1,65 @@
+#about {
+  font-family: @header-font;
+  margin-bottom: 150px;
+  .top-bar {
+    .top-bar();
+  }
+  .top-picture {
+    .top-picture();
+    background-image: url('/images/joe-vanish.jpg');
+    background-position: bottom left;
+  }
+
+  .questions {
+    margin-top: 30px;
+    .question {
+      margin-bottom: 0px;
+      margin-top: 10px;
+      font-weight: 700;
+      color: @dusky-green;
+    }
+    .answer {
+      font-size: 14px;
+      // color: @red;
+      margin-bottom: 5px;
+    }
+    .pictured-q {
+      font-size: 24px;
+      margin-bottom: 5px;
+      font-weight: 700;
+      color: @red;
+    }
+    .pictured-a {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: @brand;
+    }
+    .flip-container {
+      margin-top: 3px;
+      .flip-container();
+      height: 100px;
+      width: 100px;
+      .flipper {
+        .front, .back {
+          height: 100px;
+          width: 100px;
+        }
+      }
+    }
+    .front {
+      // background-color: @red;
+      img {
+        height: 100%;
+        width: 100%;
+        -webkit-filter: opacity(0.2);
+        filter: opacity(0.2);
+      }
+    }
+    .back {
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

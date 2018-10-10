@@ -1,0 +1,94 @@
+#homepage {
+  #page-header {
+    display: none;
+  }
+
+  .full-screen {
+    width: 100%;
+    .full-image {
+      background-image: url('/images/joe-at-church.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 100%;
+    }
+  }
+  .text-and-buttons {
+    padding-top: 115px;
+    padding-bottom: 425px;
+    padding-left: 384px;
+    color: @deep-brown;
+    .title {
+      h1 {
+        font-size: 58px;
+      }
+    }
+    .button-row {
+      .btn {
+        width: 106px;
+        margin-right: 9px;
+        margin-top: 10px;
+        font-weight: 700;
+      }
+      margin-top: 12px;
+      a {
+        color: @brand;
+      }
+      a:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    .full-screen .full-image {
+      background-position: center right;
+    }
+    .text-and-buttons {
+      padding-left: 94px;
+    }
+  }
+
+  @media screen and (max-width: 833px) {
+    .text-and-buttons {
+      padding-top: 332px;
+      padding-bottom: 204px;
+      color: @accent-white;
+      .button-row {
+        .btn-outline-primary {
+          border-color: @accent-white;
+        }
+        .btn-outline-primary:hover {
+          background-color: @accent-white;
+          border-color: @accent-white;
+          color: @brand;
+        }
+        // a {
+        //   color: @accent-white;
+        // }
+        // a:hover {
+        //   color: @brand;
+        // }
+      }
+    }
+  }
+  @media screen and (max-width: 602px) {
+    .text-and-buttons {
+      padding-right: 20px;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    .text-and-buttons {
+      padding-bottom: 100px;
+    }
+  }
+  @media screen and (max-width: 440px) {
+    .text-and-buttons {
+      padding-top: 295px;
+      padding-left: 65px;
+      padding-right: 30px;
+    }
+  }
+
+
+}

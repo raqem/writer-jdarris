@@ -1,0 +1,59 @@
+#blogs {
+  font-family: @header-font;
+  margin-bottom: 150px;
+  .top-bar {
+    .top-bar();
+  }
+  .top-picture {
+    .top-picture();
+    background-image: url('/images/joe-in-venice.jpg');
+    background-position: center left;
+  }
+  .blog-list {
+    margin-top: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    .blog {
+      max-width: 280px;
+      .name {
+        margin-top: 20px;
+        color: @red;
+      }
+      .name:hover {
+        color: @brand;
+      }
+    }
+
+    // flipping magic
+    .flip-container {
+      .flip-container();
+    }
+    .front {
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .back {
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-filter: opacity(0.2);
+        filter: opacity(0.2);
+      }
+      p {
+        position: absolute;
+        padding: 25px;
+        font-weight: 700;
+      }
+    }
+  }
+  a:hover {
+    text-decoration: none;
+    color: @dusky-green;
+  }
+}

@@ -1,0 +1,64 @@
+<div id="games" v-cloak>
+  <div class="top-bar">
+    <header id="top-bar-nav" class="navbar navbar-expand-sm navbar-dark flex-column flex-md-row justify-content-between">
+      <a class="navbar-brand mr-0" href="/">J Darris Mitchell</a>
+      <div class="nav-links">
+        <a class="navbar-link" href="/fiction">Fiction</a>
+        <a class="navbar-link" href="/games">Games</a>
+        <a class="navbar-link" href="/blogs">Blogs</a>
+        <a class="navbar-link" href="/about">About</a>
+        <a class="navbar-link" href="/contact">Contact</a>
+      </div>
+    </header>
+<!--     <div class="menu-toggle">
+      <div class="hamburger-icon"><i class="fa fa-bars"></i></div>
+    </div> -->
+  </div>
+  <div class="container mt-5 mb-5">
+    <h1>Games</h1>
+    <div class="top-picture">
+    </div>
+    <div class="row mt-5 pb-4">
+      <div class="col locs">
+        <h4 class="text-center">Legand of The Crystal Sword</h4>
+        <a href="/games/legend"><img class="mt-4" src="/images/LOCS-cover.jpg"></a>
+        <div class="links">
+          <a class="btn btn-info" href="/games/legend">More</a>
+        </div>
+      </div>
+      <div class="col">
+        <h4 class="text-center">Twine Games</h4>
+        <div class="twine-game mt-4">
+          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+              <div class="front">
+                <img src="/images/sailor.jpg">
+              </div>
+              <div class="back">
+                <img src="/images/sailor.jpg">
+                <p>If ye've ever wanted to set sail and pursue that most manly of seafaring activities or if ye've ever said, "Yeargh, sure I'd like to stab a whale but I want to decide how I stabs it, yeargh!" then the Low Seas is the game for you! </p>
+              </div>
+            </div>
+          </div>
+          <a target="_blank" href="http://www.philome.la/JoeDarris/the-low-seas"><h4 class="name">The Low Seas</h4></a>
+        </div>
+        <div class="twine-game mt-5" >
+          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+              <div class="front">
+                <img src="/images/runner.jpg">
+              </div>
+              <div class="back">
+                <img src="/images/runner.jpg">
+                <p>All you must do is run 26.2 miles, slurp your obligatory 9 packets of cryogenix (tm) fluid and survive the LAZER MILE and you too can become the next MARATHONER MASTER!</p>
+              </div>
+            </div>
+          </div>
+          <a target="_blank" href="http://www.philome.la/JoeDarris/marathoner-master"><h4 class="name">Marathoner Master</h4></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>
