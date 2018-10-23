@@ -5,7 +5,7 @@
   }
   .top-picture {
     .top-picture();
-    background-image: url('/images/j-and-flytrap.jpg');
+    background-image: url('/images/nm-joe.jpg');
     background-position: center center;
   }
 
@@ -59,6 +59,8 @@
     img {
       height: 100%;
       width: 100%;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
     }
   }
   .back {
@@ -68,8 +70,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      -webkit-filter: opacity(0.2);
-      filter: opacity(0.2);
+      -webkit-filter: opacity(0.2) grayscale(100%);
+      filter: grayscale(100%) opacity(0.2);
     }
     p {
       position: absolute;
