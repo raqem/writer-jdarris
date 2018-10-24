@@ -59,7 +59,7 @@ module.exports.custom = {
   //--------------------------------------------------------------------------
 
   // The sender that all outgoing emails will appear to come from.
-  fromEmailAddress: 'jdarrismitchell@gmail.com',
+  fromEmailAddress: 'raq.e07@gmail.com',
   fromName: 'J Darris Mitchell',
 
   // Email address for receiving support messages & other correspondences.
